@@ -5,6 +5,7 @@ import { colors } from "../../constants/color";
 
 const styles = StyleSheet.create({
     header: {
+        flex:1,
         height: 80,
         justifyContent: 'center',
         alignItems: 'center',
@@ -12,6 +13,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
     },
     title: {
+        paddingTop:20,
         fontSize: 20,
         color: colors.white,
         fontWeight: 'bold'
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
 const Header = ({titulo}) =>{
     return (
         <View style={styles.header}>
-            <Text style={styles.title}>holi</Text>
+            <Text style={styles.title}>Bienvenido!</Text>
         </View>
     )
 } 
