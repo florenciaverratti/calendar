@@ -7,12 +7,13 @@ export const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: colors.primary,
     },
     welcome:{
         color: colors.white,
+        fontFamily: 'Raleway-Medium',
     },
     circulo:{
-        backgroundColor: colors.white,
         width:50,
         height:50,
         justifyContent: 'center',

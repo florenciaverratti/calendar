@@ -6,8 +6,8 @@ import {styles} from './styles';
 
 const Welcome= ({PantallaPrincipal}) =>{
     return (
-        <>
         <View style={styles.container}>
+        <View >
             <Text style={styles.welcome}>Welcome</Text>
         </View>
         <View style={styles.botonMas}>
@@ -15,7 +15,7 @@ const Welcome= ({PantallaPrincipal}) =>{
                 <Text style={styles.l}> → </Text>
             </TouchableOpacity>
         </View>
-        </>
+        </View>
     )
 } 
 

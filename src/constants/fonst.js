@@ -1,4 +1,6 @@
-export const [fonti] = useFonts({
+import {useFonts} from 'expo-font';
+
+const [loaded] = useFonts({
     //100
     'Raleway-Thin': require('./assets/fonts/raleway/Raleway-Thin.ttf'),
     'Raleway-Italic': require('./assets/fonts/raleway/Raleway-ThinItalic.ttf'),
