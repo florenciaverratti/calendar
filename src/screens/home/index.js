@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 
 import { styles } from './styles';
 
-const PantallaPrincipal = () =>{
+const Home = () =>{
   const [nuevoTurno, setNuevoTurno] = useState('');
   const [listaTurno, setListaTurno] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -87,4 +87,4 @@ const PantallaPrincipal = () =>{
   );
 }
 
-export default PantallaPrincipal;
+export default Home;

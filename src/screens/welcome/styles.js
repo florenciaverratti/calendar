@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { colors } from '../../constants/color'
+import { colors } from '../../constants/color';
 
 export const styles = StyleSheet.create({
     container: {
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     },
     welcome:{
         color: colors.white,
-        fontFamily: 'Raleway-Medium',
+        //fontFamily: 'Raleway-Bold',
     },
     circulo:{
         width:50,

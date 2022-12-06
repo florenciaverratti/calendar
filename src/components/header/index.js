@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     title: {
         paddingTop:20,
         fontSize: 20,
+        fontFamily: 'Raleway-Thin',
         color: colors.white,
-        fontWeight: 'bold'
     },
 });
 
