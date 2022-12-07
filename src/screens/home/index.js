@@ -43,10 +43,8 @@ const Home = () =>{
 
   return (
     <View style={styles.container}>
-      
         <Header/>
-     
-      <CustomCalendar style={styles.calendar}/>
+      <CustomCalendar />
       <CustomFlatList
         data={listaTurno}
         renderItem={renderizar}
