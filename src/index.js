@@ -19,14 +19,13 @@ export default function App() {
 })
 
 if(!loaded){
-  <View>
+  return(
+    <View>
     <ActivityIndicator size='large' color={colors.gray}/>
   </View>
+  )
 }
-
   return (
-    <>
-    <Home/>
-    </>
+    <><Home/></>
   );
 }

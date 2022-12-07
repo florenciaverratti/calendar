@@ -1,6 +1,9 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+
 import {colors} from "./../../constants/color";
 import react from "react";
+
+const {height, width} = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
     container: {
@@ -8,6 +11,9 @@ export const styles = StyleSheet.create({
       backgroundColor: '#D8E7E9',
       //justifyContent: 'center', //vertical
       //alignItems: 'center'//horizontal
+    },
+    calendar:{
+      height: height * 0.1,
     },
     circulo:{
       backgroundColor: colors.secondary,
@@ -36,10 +42,7 @@ export const styles = StyleSheet.create({
       alignSelf: 'center',
       marginTop: 45  ,
     },
-    barra: {
-      height: 80,
-      backgroundColor: '#40798c',
-    },
+    
     itemContainer: {
       flex: 1,
       flexDirection: 'row',
@@ -87,5 +90,8 @@ export const styles = StyleSheet.create({
       alignItems: 'flex-end',
       marginBottom: 30,
       marginRight: 30,
+    },
+    scroll:{
+      flex: 1,
     }
   });

@@ -1,26 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Dimensions, StyleSheet, Text, View } from "react-native";
 
 import React from "react";
 import { colors } from "../../constants/color";
 
+const {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
     header: {
-        flex:1,
-        height: 80,
+        height: height * 0.1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: colors.primary,
-        paddingTop: 20,
     },
     title: {
-        paddingTop:20,
+        paddingTop: '5%',
         fontSize: 20,
-        fontFamily: 'Raleway-Thin',
+        fontFamily: 'Raleway-Regular',
         color: colors.white,
     },
 });
 
-const Header = ({titulo}) =>{
+const Header = () =>{
     return (
         <View style={styles.header}>
             <Text style={styles.title}>Bienvenido!</Text>
