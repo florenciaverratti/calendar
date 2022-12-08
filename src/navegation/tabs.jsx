@@ -10,7 +10,15 @@ const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
     return (
-        <BottomTab.Navigator initialRouteName= "App" screenOptions={{ headerShown:false,}}>
+        <BottomTab.Navigator initialRouteName= "App" 
+            screenOptions={{ headerShown:false,
+            tabBarLabelStyle:{
+                fontFamily : 'Open-Sans-Regular',
+                fontSize: 12,
+            },
+            tabBarActiveTintColor: COLORS.secondary,
+            tabBarInactiveTintColor: COLORS.gray,
+        }}>
             <BottomTab.Screen name= "Home" component= {App}
             options={{
                 tabBarIcon: ({ focused}) =>(
@@ -24,7 +32,7 @@ const Tabs = () => {
                     tabBarIcon: ({ focused}) =>(
                         <Ionicons name={ focused ? 'cart' : 'cart-outline'} 
                         size={24} color={COLORS.terciary} />
-                    ),
+                    )
                 }}
             />
             <BottomTab.Screen name= "OrderTap" component= {OrderNavigator}

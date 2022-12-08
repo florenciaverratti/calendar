@@ -11,7 +11,6 @@ const OrderNavigator = () => {
     <Stack.Navigator
         initialRouteName="Orders"
         screenOptions={{
-        headerTintColor: COLORS.text,
         headerTitleStyle: {
             fontFamily: 'Raleway-Bold',
         },
