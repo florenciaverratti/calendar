@@ -1,24 +1,27 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { colors } from '../../constants/color';
+import { COLORS } from '../../constants/themes';
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: colors.primary,
+        backgroundColor: COLORS.primary,
     },
     welcome:{
-        color: colors.white,
-        //fontFamily: 'Raleway-Bold',
+        color: COLORS.white,
+        fontSize: 40,
+        fontFamily: 'Raleway-Bold',
+        marginBottom: 50,
     },
     circulo:{
-        width:50,
-        height:50,
+        width:80,
+        height:80,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius:200,
+        borderRadius:800,
+        backgroundColor: COLORS.cuarty,
     
         shadowColor: "#000",
         shadowOffset: {
@@ -31,12 +34,7 @@ export const styles = StyleSheet.create({
             elevation: 5,
         },
         l:{
-            color: colors.black,
-            fontSize: 32,
+            color: COLORS.white,
+            fontSize: 60,
         },
-        botonMas:{
-            alignItems: 'flex-end',
-            marginBottom: 30,
-            marginRight: 30,
-        }
 });

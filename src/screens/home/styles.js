@@ -1,6 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
 
-import {colors} from "./../../constants/color";
+import {COLORS} from "./../../constants/themes";
 import react from "react";
 
 const {height, width} = Dimensions.get('window');
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
       height: height * 0.1,
     },
     circulo:{
-      backgroundColor: colors.secondary,
+      backgroundColor: COLORS.secondary,
       width:50,
       height:50,
       justifyContent: 'center',

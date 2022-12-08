@@ -1,10 +1,10 @@
-import {AddItem, CustomCalendar, CustomFlatList, CustomModal, Header}  from './../../components/index';
+import {AddItem, CustomCalendar, CustomFlatList, CustomModal, Header}  from '../../components/index';
 import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Button, Text, TouchableOpacity, View } from 'react-native';
 
 import { styles } from './styles';
 
-const Home = () =>{
+const Home = ({navigation}) =>{
   const [nuevoTurno, setNuevoTurno] = useState('');
   const [listaTurno, setListaTurno] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -43,7 +43,8 @@ const Home = () =>{
 
   return (
     <View style={styles.container}>
-        <Header/>
+      <Button title='Menu'
+      onPress={()=> navigation.navigate('Menu')}/>
       <CustomCalendar />
       <CustomFlatList
         data={listaTurno}

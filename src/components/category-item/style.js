@@ -2,13 +2,26 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
-    circulo:{
-        backgroundColor: COLORS.secondary,
-        width:50,
-        height:50,
+    container:{
+        flex:1,
+        borderRadius:10,
+        marginHorizontal: 20,
+        marginVertical: 10,
+        height: 100,
+        marginTop: '30%',
+    },
+    title:{
+        fontFamily: 'Raleway-Thin',
+        fontSize: 20,
+        color: COLORS.white ,
+    },
+    containerContent: {
+        flex: 1,
+        borderRadius:50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius:200,
+        padding: 10,
+        
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -19,13 +32,4 @@ export const styles = StyleSheet.create({
         
         elevation: 5,
     },
-    mas:{
-        color: 'white',
-        fontSize: 32,
-    },
-    botonMas:{
-      alignItems: 'flex-end',
-      marginBottom: 30,
-      marginRight: 30,
-    }
 })

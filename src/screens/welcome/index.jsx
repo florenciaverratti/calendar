@@ -1,18 +1,18 @@
+import {Button, Text, TouchableOpacity, View} from "react-native";
 import React, { useState } from 'react';
-import {Text, TouchableOpacity, View} from "react-native";
 
 import {styles} from './styles';
 
-const Welcome= () =>{
+const Welcome= ({navigation}) =>{
     
     return (
         <View style={styles.container}>
         <View >
             <Text style={styles.welcome}>Welcome</Text>
         </View>
-        <View style={styles.botonMas}>
-            <TouchableOpacity style={styles.circulo}  >
-                <Text style={styles.l}> → </Text>
+        <View>
+            <TouchableOpacity style={styles.circulo} >
+                <Text style={styles.l} onPress={()=> navigation.navigate('Agenda')}> → </Text>
             </TouchableOpacity>
         </View>
         </View>

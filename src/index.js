@@ -1,7 +1,7 @@
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
-import { Home, Welcome } from './screens';
 
-import {colors} from './constants/color';
+import AppNavigator from './navegation';
+import {COLORS} from './constants/themes';
 import { useFonts } from 'expo-font';
 
 export default function App() {
@@ -21,11 +21,9 @@ export default function App() {
 if(!loaded){
   return(
     <View>
-    <ActivityIndicator size='large' color={colors.gray}/>
-  </View>
+      <ActivityIndicator size='large' color={COLORS.gray}/>
+    </View>
   )
 }
-  return (
-    <><Home/></>
-  );
+  return <AppNavigator/>;
 }
