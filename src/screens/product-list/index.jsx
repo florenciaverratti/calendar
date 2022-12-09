@@ -1,11 +1,21 @@
-import { Text, FlatList} from "react-native";
-import React from "react";
-import {styles} from './style'
-import { COLORS } from "../../constants/themes";
-import { ProductItem} from '../../components';
-import {PRODUCTS} from    "../../constants/data/index"
+import { FlatList, Text } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
-const ProductList = ({navigation, route}) => {
+import { COLORS } from "../../constants/themes";
+import { ProductItem } from '../../components';
+import React from "react";
+import {filterProducts} from '../../store/actions'
+import {styles} from './style'
+import { useEffect } from "react";
+
+const ProductList = ({navigation}) => {
+    const category = useSelector((state) => state.category.selected);
+    const filterProducts = useSelector((state) => state.products.filterProducts);
+    const dispartch = useDispatch();
+
+    useEffect(() =>{
+        dispartch(filterProducts(category.id));
+    },[])
     
     const onSelected = (item) => {
         navigation.navigate('ProductItem', { title: item.title });
@@ -15,7 +25,7 @@ const ProductList = ({navigation, route}) => {
     );
     return(
         <FlatList
-        data={PRODUCTS}
+        data={filterProducts}
         renderItem={renderItem}
         keyExtractor = {(item) => item.id.toString()}
         style= {styles.containerList}

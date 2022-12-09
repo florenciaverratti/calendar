@@ -1,19 +1,23 @@
-import { FlatList} from "react-native";
-import React from "react";
-import {styles} from './style'
+import { useDispatch, useSelector } from "react-redux";
 
 import { CategoryItem } from "../../components";
-import {CATEGORIES} from    "../../constants/data/index"
+import { FlatList } from "react-native";
+import React from "react";
+import { selectCategory } from '../../store/actions'
+import {styles} from './style'
 
 const HamburgerMenu = ({navigation, route}) => {
+    const dispatch = useDispatch();
+    const categories = useSelector((state) => state.category.categories );
     const onSelected = (item) =>{
-        navigation.navigate('ProductList', {categoryid: item.id, title: item.title})
+        dispatch(selectCategory(item.id));
+        navigation.navigate('ProductList', {title: item.title})
     };
 
     const renderItem = ({item}) => <CategoryItem item={item} onSelected={onSelected}/>; 
     return(
         <FlatList
-        data={CATEGORIES}
+        data={categories}
         renderItem={renderItem}
         keyExtractor = {(item) => item.id.toString()}
         style= {styles.containerList}
