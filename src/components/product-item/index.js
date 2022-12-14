@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Button, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { COLORS } from '../../constants/themes';
@@ -9,7 +9,7 @@ import {styles} from './style'
 const ProductItem = ({ item, onSelected}) => {
     const dispatch = useDispatch();
     const product = useSelector((state) => state.products.selected);
-    const { title, price, description, weight } = product || {};
+    const { title, price } = product || {};
 
     const onAddToCart = () => {
         dispatch(addToCart(product));

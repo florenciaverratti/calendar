@@ -1,4 +1,4 @@
-export const productsType = {
-    SELECT_PRODUCT: 'SELECT_PRODUCT',
-    FILTER_PRODUCTS:  'FILTER_PRODUCTS',
-}
+export const productsTypes = {
+  SELECT_PRODUCT: 'SELECT_PRODUCT',
+  FILTER_PRODUCTS: 'FILTER_PRODUCTS',
+};

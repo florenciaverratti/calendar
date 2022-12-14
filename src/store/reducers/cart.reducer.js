@@ -1,6 +1,6 @@
+/* eslint-disable no-case-declarations */
+import { sumTotal } from '../../utils';
 import { cartTypes } from '../types';
-import { sumTotal } from '../../utils/';
-
 const { ADD_TO_CART, REMOVE_FROM_CART, CONFIRM_ORDER } = cartTypes;
 const initialState = {
   items: [],

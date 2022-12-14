@@ -1,7 +1,8 @@
-import { TouchableOpacity, View,Text } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+
+import { COLORS } from "../../constants/themes";
 import React from "react";
 import {styles} from './style'
-import { COLORS } from "../../constants/themes";
 
 const CategoryItem = ({item, onSelected}) => {
     return(

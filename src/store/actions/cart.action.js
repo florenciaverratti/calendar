@@ -9,9 +9,9 @@ export const addToCart = (item) => ({
 });
 
 export const removeFromCart = (id) => ({
-    type: REMOVE_FROM_CART,
-    id,
-  });
+  type: REMOVE_FROM_CART,
+  id,
+});
 
 export const confirmCart = (items, total) => {
   return async (dispatch) => {
