@@ -1,7 +1,7 @@
-import {Home, Welcome,Menu,ProductList} from '../screens/index';
+import {Home, Menu, Product, ProductList, Welcome} from '../screens/index';
 
-import React from 'react';
 import { COLORS } from '../constants/themes';
+import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack= createNativeStackNavigator();
@@ -42,7 +42,13 @@ const App = () => {
                     title: route.params.title, 
                 })}
             />
-            
+            <Stack.Screen 
+                name='Product' 
+                component={Product}
+                options={({route}) => ({
+                    title: route.params.title, 
+                })}
+            />
             {/* <Stack.Screen 
                 name='Profesionals' 
                 component={Profesionals}

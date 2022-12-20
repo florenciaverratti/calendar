@@ -3,7 +3,6 @@ import { deleteOrder, getOrders } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {OrderItem} from '../../components/index';
-import React from "react";
 import {styles} from './style'
 import { useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
@@ -17,19 +16,15 @@ const Orders = ({navigation}) => {
 
     useFocusEffect(
         useCallback(() => {
-        dispatch(getOrders());
+            dispatch(getOrders());
         }, [dispatch])
     );
 
     const renderItem = ({ item }) => <OrderItem item={item} onDelete={onDelete} />;
     return (
-        <View style={styles.container}>
-            <FlatList 
-            data={orders} 
-            renderItem={renderItem} 
-            keyExtractor={(item) => item.id.toString()} 
-            />
-        </View>
-    )
+        <FlatList data={orders} 
+        renderItem={renderItem} 
+        keyExtractor={(item) => item.id.toString()} />
+    );
 }
 export default Orders;

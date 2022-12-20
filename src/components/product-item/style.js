@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants/themes";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container:{
@@ -8,14 +8,6 @@ export const styles = StyleSheet.create({
     title:{
         fontFamily: 'Raleway-Bold',
         fontSize: 20,
-    },
-    time:{
-        fontFamily: 'Raleway-Regular',
-        fontSize:15,
-    },
-    price:{
-        fontFamily: 'Raleway-Regular',
-        fontSize: 15,
     },
     content: {
         flexDirection: "row",

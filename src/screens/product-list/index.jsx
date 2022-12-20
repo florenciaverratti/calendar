@@ -17,16 +17,16 @@ const ProductList = ({navigation}) => {
 
     const onSelected = (item) => {
         dispatch(selectProduct(item.id));
-        navigation.navigate('ProductItem', { title: item.title });
+        navigation.navigate('Product', { title: item.title });
     };
     const renderItem = ({ item }) => (
-        <ProductItem item={item} onSelected={onSelected} color={category.color} />
+        <ProductItem item={item} onSelected={onSelected} />
     );
     return(
         <FlatList
         data={filteredProducts}
         renderItem={renderItem}
-        keyExtractor = {(item) => item.id.toString()}
+        keyExtractor={(item) => item.id.toString()}
         style= {styles.containerList}
         />
     );

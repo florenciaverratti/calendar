@@ -10,6 +10,7 @@ export const ORDERS = [
                 title: 'Corte',
                 price: 2000,
                 time: '1 hora',
+                quantity:1,
             },
             {
                 id: 5,
@@ -17,6 +18,7 @@ export const ORDERS = [
                 title: 'Alisado',
                 price: 4000,
                 time: '3 horas',
+                quantity: 2,
             },
         ]
     },
