@@ -13,7 +13,6 @@ const Product = ({ navigation }) => {
 
   const onAddToCart = () => {
     dispatch(addToCart(product));
-    console.warn('paso 6');
   };
   return (
     <View style={styles.container}>

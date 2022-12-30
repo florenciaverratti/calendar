@@ -1,7 +1,10 @@
 import {Home, Menu, Product, ProductList, Welcome} from '../screens/index';
 
 import { COLORS } from '../constants/themes';
+import {Ionicons} from '@expo/vector-icons';
 import React from 'react';
+import TabNavigator from './tabs';
+import { TouchableOpacity, } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack= createNativeStackNavigator();
@@ -14,6 +17,9 @@ const App = () => {
                 fontFamily:  'Raleway-Regular',
             },
             headerTintColor: COLORS.white,
+            headerLeft: () => (
+                <TabNavigator/>
+            ),
         }}
         >
             <Stack.Screen 
@@ -24,11 +30,13 @@ const App = () => {
             <Stack.Screen 
                 name='Agenda' 
                 component={Home}
-                options={{
+                options={({ navigation }) => ({
+                    title: '',
                     headerStyle:{
                         backgroundColor: COLORS.secondary,
                     },
-                }}
+                     
+                })}
             />
             <Stack.Screen 
                 name='Menu' 
@@ -49,16 +57,6 @@ const App = () => {
                     title: route.params.title, 
                 })}
             />
-            {/* <Stack.Screen 
-                name='Profesionals' 
-                component={Profesionals}
-                options={{headerShown: false}}
-            />
-            <Stack.Screen 
-                name='Servicios' 
-                component={Servicios}
-                options={{headerShown: false}}
-            /> */}
         </Stack.Navigator>
     );
 };

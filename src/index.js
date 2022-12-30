@@ -1,9 +1,11 @@
+import 'react-native-gesture-handler';
+
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import AppNavigator from './navegation';
 import {COLORS} from './constants/themes';
 import { Provider } from 'react-redux';
-import store from './store'
+import store from './store';
 import { useFonts } from 'expo-font';
 
 export default function App() {

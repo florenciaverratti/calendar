@@ -1,7 +1,9 @@
 import {AddItem, CustomCalendar, CustomFlatList, CustomModal, Header}  from '../../components/index';
 import React, { useState } from 'react';
-import { Button, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
+import { COLORS } from '../../constants/themes';
+import {Ionicons} from '@expo/vector-icons';
 import { styles } from './styles';
 
 const Home = ({navigation}) =>{
@@ -31,7 +33,7 @@ const Home = ({navigation}) =>{
     <View style={styles.itemContainer}>
       <Text style={styles.item}>{item.value}</Text>
       <TouchableOpacity onPress={() => borrarTurno(item.id)} >
-        <Text> X </Text>
+        <Ionicons name="close-outline" size={24} color={COLORS.white} />
       </TouchableOpacity>
     </View>
   )
@@ -43,9 +45,7 @@ const Home = ({navigation}) =>{
 
   return (
     <View style={styles.container}>
-      <Button title='Menu'
-      onPress={()=> navigation.navigate('Menu')}/>
-      <CustomCalendar />
+      {/*<CustomCalendar />*/}
       <CustomFlatList
         data={listaTurno}
         renderItem={renderizar}
@@ -54,7 +54,6 @@ const Home = ({navigation}) =>{
       />
       
       <CustomModal animationType='slide' visible={modalVisible}>
-          
           <View style={styles.modalContainer}>
             <Text style={styles.modalTitle}>Añadir Turno</Text>
           </View>
@@ -79,7 +78,7 @@ const Home = ({navigation}) =>{
       
       <View style={styles.botonMas}>
         <TouchableOpacity style={styles.circulo}  onPress={() => modalagregarTurno()}>
-          <Text style={styles.l}> + </Text>
+          <Ionicons name="add-outline" size={24} color={COLORS.white} />
         </TouchableOpacity>
       </View>
     </View>
